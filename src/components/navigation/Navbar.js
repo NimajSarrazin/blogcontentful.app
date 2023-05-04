@@ -1,30 +1,101 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    setShowModal(true);
+  };
+  const handleLinkClick = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="text-white">
-      <ul className="flex justify-around gap-8 mx-auto bg-gradient-to-r from-[#f762E4] via-[#F38488] to-[#FAAD85] p-5">
-        <li className="font-black text-xl">
-          <Link href='/'>
-            Read<span className="text-yellow-200">it.</span>
-          </Link>
-        </li>
-        <ul className="flex gap-3">
-          <Link href="/">
-            <li>Home</li>
-          </Link>
-          <Link href="/about">
-            <li>Articles</li>
-          </Link>
-          <Link href="/contact">
-            <li>Team</li>
-          </Link>
-          <Link href="/post/1">
-            <li>Contact</li>
-          </Link>
+    <div className=" bg-black text-white list-none absolute top-0 left-0 right-0 z-10 md:bg-transparent">
+      <div className="container flex justify-between ">
+        <Link href="/">
+          <div className="flex items-center justify-between h-16">
+            <li className="font-black text-2xl">
+              Read<span className="text-yellow-200">it.</span>
+            </li>
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={handleClick}
+                type="button"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+                aria-label="Main menu"
+                aria-expanded="false"
+              >
+                <svg
+                  className="block h-6 w-6"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                <svg
+                  className="hidden h-6 w-6"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+                MENU
+              </button>
+            </div>
+          </div>
+        </Link>
+        <ul className="flex items-center justify-between">
+          <div className="hidden md:block">
+            <div className="ml-10 flex gap-5">
+              <Link href="/" onClick={handleLinkClick}>
+                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
+                  Home
+                </li>
+              </Link>
+              <Link href="/about" onClick={handleLinkClick}>
+                <li className="hover:bg-gray-700  rounded-md text-sm font-medium">
+                  Articles
+                </li>
+              </Link>
+              <Link href="/contact" onClick={handleLinkClick}>
+                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
+                  Team
+                </li>
+              </Link>
+              <Link href="/post/1" onClick={handleLinkClick}>
+                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
+                  Contact
+                </li>
+              </Link>
+            </div>
+          </div>
         </ul>
-      </ul>
+      </div>
+      <div
+        className={`${
+          showModal ? "block" : "hidden"
+        } md:hidden bg-black px-2 pt-2 pb-3`}
+      >
+        <Link href="/">
+          <li className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">
+            Home
+          </li>
+        </Link>
+      </div>
     </div>
   );
 }

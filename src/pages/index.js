@@ -1,5 +1,8 @@
 
 import Card from "@/components/cards/Card";
+import Navbar from "@/components/navigation/Navbar";
+import CustomPagination from "@/components/navigation/pagination/pagination";
+import Pagination from "@/components/navigation/pagination/pagination";
 import Hero from "@/layout/hero";
 import Layout from "@/layout/Layout";
 import { createClient } from "contentful";
@@ -8,23 +11,22 @@ export default function Home({ posts }) {
   console.log(posts)
   return (
     <Layout>
-      <div className="">
-        <Hero
-          bgColor="bg-gradient-to-r from-[#f762E4] via-[#F38488] to-[#FAAD85]"
-          title="Readit blog"
-          url_img=""
-        />
+      <div className="hero-bg">
+        <Hero />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {posts.map((post) =>(
-          <Card 
-          key={post.sys.id}
-          title={post.title}
-          slug={post.fields.slug}
-          extract={post.fields.extract}
-          img={post.fields.featureImage.fields.file.url}
+      <div className="grid grid-cols-1 mt-10 md:grid-cols-2 md:gap-10 md:px-24 md:py-24 lg:grid-cols-3">
+        {posts.map((post) => (
+          <Card
+            key={post.sys.id}
+            title={post.fields.title}
+            slug={post.fields.slug}
+            extract={post.fields.extract}
+            img={post.fields.featureImage.fields.file.url}
           />
         ))}
+      </div>
+      <div className="">
+        <CustomPagination />
       </div>
     </Layout>
   );

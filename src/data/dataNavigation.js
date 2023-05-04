@@ -1,6 +1,6 @@
 import React from 'react'
 
-const dataNavigation= [
+export const DataNavigation= [
     {
         home : 'Home',
         liens:'/' 

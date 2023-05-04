@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero_bg {
-  background-image: url("/src/layout/bg1.jpg");
+* {
+  box-sizing: border-box;
+}
+:root {
+  --fnt-size: 3rem;
+  --bg-size: 800px;
+}
+
+.ftn-size {
+  font-size: var(--fnt-size);
+  line-height: 1.6;
+}
+
+.container- {
+  max-width: 1200px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  background: linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
+}
+
+.hero-bg {
+  position: relative;
+}
+
+.bg-size {
+  height: var(--bg-size);
 }

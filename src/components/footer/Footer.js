@@ -1,10 +1,11 @@
 import React from 'react'
+import CardFooter from '../cards/CardFooter'
 
-export default function Footer({bgColor}) {
-  const styleBg = `${bgColor}`
+export default function Footer() {
+ 
   return (
-    <div className={`${styleBg}`}>
-      <p>Hey</p>
+    <div className="">
+      <CardFooter/>
     </div>
   )
 }
