@@ -1,0 +1,11 @@
+Projet avec NextJs
+////////////////////////////////////////////////////////////////
+1. Create projet npx create-next-app@latest
+2. Install contentfull dependance => npm i contentful 
+3. Connexion avec mes clé API contentful 
+4. Créer mon content-type sur contenful 
+5. Connexion avec mes clés API contentful 
+6. Création fichier .env.local avec mes variables d'environment
+7. Pour le richiText  => npm i @contentful/rich-text-react-renderer 
+
+

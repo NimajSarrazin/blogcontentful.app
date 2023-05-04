@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer({bgColor}) {
+  const styleBg = `${bgColor}`
   return (
-    <div>Footer</div>
+    <div className={`${styleBg}`}>
+      <p>Hey</p>
+    </div>
   )
 }
