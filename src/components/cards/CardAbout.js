@@ -8,7 +8,7 @@ export default function CardAbout() {
         <div className="relative">
           <div
             style={{ backgroundImage: 'url("/img/ImageAbout1.webp")' }}
-            className="w-full bg-cover bg-no-repeat bg-center relative h-[400px] md:h-screen"
+            className="w-full bg-cover bg-no-repeat bg-center relative h-[400px] md:h-[535px]"
           >
             <div className="cursor-pointer hidden md:block lg:hidden absolute bottom-0 right-0 -mr-9 top-1/3">
               <svg

@@ -15,7 +15,7 @@ export default function CardHappyClient() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:justify-center md:gap-2  md:grid-cols-3 pt-20">
+    <div className="container grid grid-cols-1 md:justify-center md:gap-2 md:grid-cols-2  lg:grid-cols-3 mb-32">
       {data.map((item, index) => (
         <div
           key={index}

@@ -91,15 +91,10 @@ export default function Navbar() {
               </Link>
               <Link href="/about" onClick={handleLinkClick}>
                 <li className="hover:bg-gray-700  rounded-md text-sm font-medium">
-                  Articles
+                  About
                 </li>
               </Link>
               <Link href="/contact" onClick={handleLinkClick}>
-                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
-                  Team
-                </li>
-              </Link>
-              <Link href="/post/1" onClick={handleLinkClick}>
                 <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
                   Contact
                 </li>

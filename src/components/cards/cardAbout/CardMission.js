@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// création du table qui stock mes tab ('Our mission', '')
+// création d'une variable qui stock mes tab ('Our mission', 'Our vision, 'Our values')
 const tabContents = [
   {
     name: "Our Mission",
