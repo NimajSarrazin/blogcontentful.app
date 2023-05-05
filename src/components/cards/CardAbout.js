@@ -3,57 +3,55 @@ import CardMission from "./cardAbout/CardMission";
 
 export default function CardAbout() {
   return (
-    <div className="container lg:px-10">
-      <div className="lg:flex lg:space-x-12">
+    <div className="container">
+      <div className="md:grid md:grid-cols-2 md:gap-10">
         <div className="relative">
-          <img
-            className="w-auto"
-            src="/img/ImageAbout1.webp"
-            alt="ImageAbout1 woman with black glasse"
-          />
-          <div>
-            <div className="hidden md:hidden lg:block absolute -right-12 bottom-0 top-1">
+          <div
+            style={{ backgroundImage: 'url("/img/ImageAbout1.webp")' }}
+            className="w-full bg-cover bg-no-repeat bg-center relative h-[400px] md:h-screen"
+          >
+            <div className="cursor-pointer hidden md:block lg:hidden absolute bottom-0 right-0 -mr-9 top-1/3">
               <svg
-                className="text-yellow-500 w-20"
+                className="text-[#ffd369]"
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 24 24"
-                height=""
-                width=""
+                height="80px"
+                width="80px"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
               </svg>
             </div>
-            <div className="hidden md:block lg:hidden absolute top-1/3 left-72">
-              <svg
-                className="text-yellow-500 w-32"
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                height=""
-                width=""
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
-              </svg>
-            </div>
-            <div className="block absolute top-1/3 left-1/3 md:hidden lg:hidden">
-              <svg
-                className="text-yellow-500 w-24"
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                height=""
-                width=""
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
-              </svg>
-            </div>
+          </div>
+          <div className="pulse hidden md:hidden lg:block absolute right-0 -mr-9 bottom-0 top-1/3">
+            <svg
+              className="text-[#ffd369]"
+              stroke="currentColor"
+              fill="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 24 24"
+              height="80px"
+              width="80px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
+            </svg>
+          </div>
+          <div className="block absolute bottom-0 left-1/3 top-1/3 mt-5 md:hidden lg:hidden">
+            <svg
+              className="text-[#ffd369] w-24"
+              stroke="currentColor"
+              fill="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 24 24"
+              height="80px"
+              width="80px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
+            </svg>
           </div>
         </div>
         <div className="py-10">
@@ -62,7 +60,7 @@ export default function CardAbout() {
             <h2 className="font-bold text-gray-800 text-3xl">
               We give you the best articles yout want.
             </h2>
-            <p className="text-gray-400 mt-4">
+            <p className="text-gray-400 mt-4 text-sm mb-4">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia
             </p>

@@ -2,17 +2,19 @@ import React from "react";
 
 export default function CardQuestions() {
   return (
-    <div className=" md:w-1/2 lg:w-1/4">
-      <h2 className="mb-10 text-xl font-normal"> Have a Questions?</h2>
-      <div className="p-0">
-        <ul className="">
-          <li className="flex mb-4 gap-5">
+    <div className="pb-20">
+      <h4 className="pb-6 text-white text-xl font-normal">
+        Have a Questions?
+      </h4>
+      <div className="pb-4 flex items-start">
+        <ul>
+          <li className="flex items-start pb-4 space-x-5">
             <span className="pt-[2px]">
               <svg
                 className="text-lg"
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 384 512"
                 height="1em"
                 width="40px"
@@ -25,13 +27,13 @@ export default function CardQuestions() {
               203 Fake St. Mountain View, San Francisco, California, USA
             </span>
           </li>
-          <li className="flex mb-4 gap-5">
+          <li className="flex items-start pb-4 space-x-5">
             <span className="pt-[2px]">
               <svg
                 className="text-lg"
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 512 512"
                 height="1em"
                 width="40px"
@@ -42,13 +44,13 @@ export default function CardQuestions() {
             </span>
             <span className="text-gray-400 text-sm">+2 392 3929 210</span>
           </li>
-          <li className="flex mb-4 gap-5">
+          <li className="flex items-start pb-4 space-x-5">
             <span className="pt-[2px]">
               <svg
                 className="text-lg"
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 512 512"
                 height="1em"
                 width="40px"

@@ -1,31 +1,4 @@
-// import { Avatar } from "@nextui-org/react";
-
-// export default function CardHappyClient({ url_img }) {
-//   return (
-//     <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-//       <p className="px-6 py-4">
-//         Far far away, behind the word mountains, far from the countries Vokalia
-//         and Consonantia,there live the blind texts.
-//       </p>
-//       <div className="flex items-center px-6 py-4">
-//         <Avatar
-//           size="large"
-//           src={`img/${url_img}`}
-//           alt="personne1.webp"
-//           className="rounded-full w-16 md:w-20"
-//         />
-//         <div className="ml-4">
-//           <h2 className="font-bold text-xl md:text-2xl">Roger Scott</h2>
-//           <p className="text-yellow-400 text-base md:text-lg">
-//             Marketing Manager
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 import { Avatar } from "@nextui-org/react";
-
 export default function CardHappyClient() {
   const data = [
     {
@@ -42,11 +15,13 @@ export default function CardHappyClient() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="grid grid-cols-1 md:justify-center md:gap-2  md:grid-cols-3 pt-20">
       {data.map((item, index) => (
         <div
-          key={index} 
-          className={`max-w-md mx-4 my-4 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ${index === 0   ? "" : "hidden md:block"}`}
+          key={index}
+          className={`max-w-md mx-4 my-4 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ${
+            index === 0 ? "" : "hidden md:block"
+          }`}
         >
           <p className="px-6 py-4">
             Far far away, behind the word mountains, far from the countries

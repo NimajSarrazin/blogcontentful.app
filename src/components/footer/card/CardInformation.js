@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 const dataLiens = [
   {
@@ -6,7 +7,7 @@ const dataLiens = [
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         height="1em"
         width="1em"
@@ -25,7 +26,7 @@ const dataLiens = [
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         height="1em"
         width="1em"
@@ -44,7 +45,7 @@ const dataLiens = [
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         height="1em"
         width="1em"
@@ -63,7 +64,7 @@ const dataLiens = [
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         height="1em"
         width="1em"
@@ -79,15 +80,15 @@ const dataLiens = [
 ];
 export default function CardInformation() {
   return (
-    <div className="mb-6 w-1/4">
-      <h2 className="mb-10 text-xl font-normal"> Information</h2>
-      <ul className="list-none">
-        {dataLiens.map((item, index) => (
-          <li key={index} className="py-1">
-            <span className="flex items-center">
-              {item.svg}
-              {item.name}
-            </span>
+    <div className="">
+      <h6 className="pb-6 text-white text-lg lg:px-14">Information</h6>
+      <ul className="text-sm text-white pb-6 lg:px-14">
+        {dataLiens.map((lien, index) => (
+          <li className="pb-2" key={index}>
+            <Link href="/" className="flex pb-2 items-center">
+              {lien.svg}
+              <p className="pl-2">{lien.name}</p>
+            </Link>
           </li>
         ))}
       </ul>

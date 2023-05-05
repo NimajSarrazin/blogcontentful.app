@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState(false);
+  const navStyleScrolling = "";
 
   const handleClick = () => {
     setShowModal(true);
@@ -10,14 +11,36 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setShowModal(false);
   };
+  // ajout d'un useState scrool
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      if (scrollTop > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className=" bg-black text-white list-none absolute top-0 left-0 right-0 z-10 md:bg-transparent">
+    <div
+      className={`bg-black text-white list-none absolute top-0 left-0 right-0 z-10 md:bg-transparent ${
+        scrolled ? "floating" : navStyleScrolling
+      }`}
+    >
       <div className="container flex justify-between ">
         <Link href="/">
           <div className="flex items-center justify-between h-16">
             <li className="font-black text-2xl">
-              Read<span className="text-yellow-200">it.</span>
+              Read<span className="text-yellow-200">it</span>.
             </li>
             <div className="-mr-2 flex md:hidden">
               <button

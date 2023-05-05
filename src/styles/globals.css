@@ -15,8 +15,8 @@
   line-height: 1.6;
 }
 
-.container- {
-  max-width: 1200px;
+.container {
+  max-width: 1210px;
 }
 .container {
   width: 100%;
@@ -35,6 +35,10 @@
   background: linear-gradient(45deg, #f200ff 0%, #ffba42 100%);
 }
 
+.overlayScrolling{
+   background: linear-gradient(45deg, #f200ff 0%, #ffba42 100%)
+}
+
 .hero-bg {
   position: relative;
 }
@@ -42,5 +46,4 @@
 .bg-size {
   height: var(--bg-size);
 }
-
 
