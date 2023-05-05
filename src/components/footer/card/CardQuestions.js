@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CardQuestions() {
   return (
-    <div className="">
+    <div className=" md:w-1/2 lg:w-1/4">
       <h2 className="mb-10 text-xl font-normal"> Have a Questions?</h2>
       <div className="p-0">
         <ul className="">

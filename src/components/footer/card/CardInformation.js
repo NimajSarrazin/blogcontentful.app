@@ -79,7 +79,7 @@ const dataLiens = [
 ];
 export default function CardInformation() {
   return (
-    <div className="mb-6">
+    <div className="mb-6 w-1/4">
       <h2 className="mb-10 text-xl font-normal"> Information</h2>
       <ul className="list-none">
         {dataLiens.map((item, index) => (

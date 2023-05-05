@@ -14,7 +14,7 @@ export default function Home({ posts }) {
       <div className="hero-bg">
         <Hero />
       </div>
-      <div className="grid grid-cols-1 mt-10 md:grid-cols-2 md:gap-10 md:px-24 md:py-24 lg:grid-cols-3">
+      <div className="container grid grid-cols-1 md:grid-cols-2 md:gap-10 md:py-24 lg:grid-cols-3">
         {posts.map((post) => (
           <Card
             key={post.sys.id}
@@ -41,7 +41,7 @@ export async function getStaticProps() {
   const data = await client.getEntries({
     content_type: "blogNextjs",
     order: "sys.createdAt",
-    limit: 8,
+    limit: 9,
   });
   // On envoie la data dans le props de la page
 

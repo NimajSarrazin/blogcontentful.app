@@ -5,10 +5,10 @@ import CardCopyright from "./CardCopyright";
 
 export default function CardLastestNews({ url_img, url_img2 }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4">
-      <div className="w-full md:w-1/2 lg:w-2/3">
+    <div className="flex flex-wrap">
+      <div className="w-full md:w-1/3 lg:w-1/3">
         <h2 className="text-white mb-10 text-xl font-normal">latest News</h2>
-        <div className="flex flex-col md:flex-row mb-4">
+        <div className="flex md:flex-row mb-4">
           <span
             className="block h-20 w-20 bg-cover bg-center bg-no-repeat rounded-md mr-6"
             style={{ backgroundImage: `url(${url_img})` }}
@@ -24,7 +24,7 @@ export default function CardLastestNews({ url_img, url_img2 }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mb-4">
+        <div className="flex md:flex-row mb-4">
           <span
             className="block h-20 w-20 bg-cover bg-center bg-no-repeat rounded-md mr-6"
             style={{ backgroundImage: `url(${url_img2})` }}
@@ -41,7 +41,7 @@ export default function CardLastestNews({ url_img, url_img2 }) {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="flex flex-wrap">
         <CardInformation />
           <CardQuestions />
       </div>

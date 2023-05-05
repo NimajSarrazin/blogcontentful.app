@@ -4,7 +4,7 @@ import React from "react";
 export default function Card({ img, title, extract, slug }) {
   return (
     <Link href={`post/${slug}`}>
-      <div className="px-4 py-10">
+      <div className="py-10">
         <div className="relative">
           <img
             src={img}

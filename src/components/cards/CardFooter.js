@@ -64,8 +64,8 @@ export default function CardFooter({ posts }) {
               </li>
             </ul>
           </div>
-        </div>
         <CardLastestNews url_img="img/image_1.jpg" url_img2="img/image_2.jpg" />
+        </div>
       </div>
     </div>
   );
