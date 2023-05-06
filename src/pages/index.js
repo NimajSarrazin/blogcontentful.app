@@ -1,13 +1,11 @@
 import Card from "@/components/cards/Card";
-import Navbar from "@/components/navigation/Navbar";
 import CustomPagination from "@/components/navigation/pagination/pagination";
-import Pagination from "@/components/navigation/pagination/pagination";
 import Hero from "@/layout/hero";
 import Layout from "@/layout/Layout";
 import { createClient } from "contentful";
 
-export default function Home({ posts }) {
-  // console.log(posts);
+export default function Home({ posts}) {
+  console.log(posts);
   return (
     <Layout>
       <div className="hero-bg">
@@ -19,7 +17,7 @@ export default function Home({ posts }) {
         id="sectionCard"
       >
         {posts.map((post) => (
-          // Ternaire de si mon post slug est strictement égale à Mode("Mode" et le slug rentré sur content full sur la 9e card qui donc l'id 8) alors en format tablet je le cache sinon en lg il sera block.
+          // Ternaire de si mon post slug est strictement égale à Mode("Mode" et le slug rentré sur contentful sur la 9e card qui donc l'id 8) alors en format tablet je le cache sinon en lg il sera block.
           <div
             key={post.sys.id}
             className={post.fields.slug === "Mode" ? "md:hidden lg:block" : ""}
@@ -30,6 +28,7 @@ export default function Home({ posts }) {
               slug={post.fields.slug}
               extract={post.fields.extract}
               img={post.fields.featureImage.fields.file.url}
+              createdAT={post.fields.createdAt}
             />
           </div>
         ))}

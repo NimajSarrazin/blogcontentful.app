@@ -3,7 +3,7 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import CardIcon from "./CardIcon";
 
-export default function Card({ img, title, extract, slug, posts }) {
+export default function Card({ img, title, extract, slug, posts, createdAT}) {
   return (
     <Link href={`post/${slug}`}>
       <div className="py-10 max-w-sm">
@@ -29,7 +29,7 @@ export default function Card({ img, title, extract, slug, posts }) {
         </div>
         <div className="hover:text-gray-600">
           <p className="mt-2 font-bold text-lg ">{title}</p>
-          <p className="mt-2 text-sm md:text-base">{extract}</p>
+          <p className="mt-2 text-sm md:text-base">{extract} {createdAT}</p>
         </div>
       </div>
       <CardIcon/>

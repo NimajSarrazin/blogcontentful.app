@@ -1,8 +1,10 @@
 import Layout from "@/layout/Layout";
 import React from "react";
 import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import HeroAll from "@/layout/heroAll";
+import CardBlogSingle from "@/components/cards/CardBlogSingle";
+import { format } from "date-fns";
+import CardAsideBlogSingle from "@/components/cards/CardBlogSingle/CardAsideBlogSingle";
 
 // Connect to contentful
 const client = createClient({
@@ -50,15 +52,20 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Index({ post }) {
-  const { title, featureImage, content} = post.fields;
+  const { title, featureImage, content, createdAt} = post.fields;
+    const dateObj = createdAt ? new Date(createdAt) : null;
+    const formattedDate = dateObj ? format(dateObj, "dd/MM/yyyy") : "";
   return (
     <Layout>
       <HeroAll title='Blog Single'/>
-      <div>
-        <img src={featureImage.fields.file.url} alt={title} className="max-w-xs" />
-        <p>{title}</p>
-        <div>{documentToReactComponents(content)}</div>
+      <div className="container md:py-20 sm:py-6 p-4 block lg:flex lg:space-x-6">
+       <CardBlogSingle  title={title} content={content} url_img={featureImage.fields.file.url} createdAT={formattedDate}/>
+       <CardAsideBlogSingle />
       </div>
     </Layout>
+
   );
 }
+
+{
+} 
