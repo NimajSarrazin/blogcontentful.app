@@ -85,17 +85,17 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex gap-5">
               <Link href="/" onClick={handleLinkClick}>
-                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
+                <li className="hover:bg-orange-300 hover:shadow-xl rounded-md text-sm font-medium">
                   Home
                 </li>
               </Link>
               <Link href="/about" onClick={handleLinkClick}>
-                <li className="hover:bg-gray-700  rounded-md text-sm font-medium">
+                <li className="hover:bg-orange-300 hover:shadow-xl  rounded-md text-sm font-medium">
                   About
                 </li>
               </Link>
               <Link href="/contact" onClick={handleLinkClick}>
-                <li className="hover:bg-gray-700 rounded-md text-sm font-medium">
+                <li className="hover:bg-orange-300 hover:shadow-xl rounded-md text-sm font-medium">
                   Contact
                 </li>
               </Link>

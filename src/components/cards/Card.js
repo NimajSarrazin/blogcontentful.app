@@ -1,15 +1,17 @@
 import Link from "next/link";
 import React from "react";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import CardIcon from "./CardIcon";
 
-export default function Card({ img, title, extract, slug }) {
+export default function Card({ img, title, extract, slug, posts }) {
   return (
     <Link href={`post/${slug}`}>
-      <div className="py-10">
+      <div className="py-10 max-w-sm">
         <div className="relative">
           <img
             src={img}
             alt={title}
-            className="object-cover w-full h-48 sm:h-72 md:h-64 lg:h-72 xl:h-[32rem]"
+            className="object-cover w-full h-48 sm:h-72 md:h-64 lg:h-72 xl:h-[300px]"
           />
           <div className="absolute bottom-0 left-3 group-hover:block">
             <div className="bg-yellow-400 flex gap-1.5 text-black text-sm rounded-sm py-1 px-2 max-w-xs relative">
@@ -25,9 +27,12 @@ export default function Card({ img, title, extract, slug }) {
             </div>
           </div>
         </div>
-        <p className="mt-2 font-bold text-lg">{title}</p>
-        <p className="mt-2 text-sm md:text-base">{extract}</p>
+        <div className="hover:text-gray-600">
+          <p className="mt-2 font-bold text-lg ">{title}</p>
+          <p className="mt-2 text-sm md:text-base">{extract}</p>
+        </div>
       </div>
+      <CardIcon/>
     </Link>
   );
 }

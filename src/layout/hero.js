@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsArrowDown } from "react-icons/bs";
 
@@ -24,8 +25,9 @@ export default function Hero() {
               they live in Bookmarksgrove right at the coast of the Semantics, a
               large language ocean.
             </p>
-
-            <BsArrowDown className="text-white text-4xl absolute left-0 -bottom-20  z-20 cursor-pointer animate-bounce md:-bottom-30  lg:-bottom-14 xl:-bottom-52 xl:text-6xl" />
+            <Link href='#sectionCard'>
+              <BsArrowDown className="text-white text-4xl absolute left-0 -bottom-20  z-20 cursor-pointer animate-bounce md:-bottom-30  lg:-bottom-14 xl:-bottom-52 xl:text-6xl" />
+            </Link>
           </div>
         </div>
       </div>

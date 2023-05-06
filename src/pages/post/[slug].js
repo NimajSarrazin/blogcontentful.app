@@ -2,6 +2,7 @@ import Layout from "@/layout/Layout";
 import React from "react";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import HeroAll from "@/layout/heroAll";
 
 // Connect to contentful
 const client = createClient({
@@ -52,6 +53,7 @@ export default function Index({ post }) {
   const { title, featureImage, content} = post.fields;
   return (
     <Layout>
+      <HeroAll title='Blog Single'/>
       <div>
         <img src={featureImage.fields.file.url} alt={title} className="max-w-xs" />
         <p>{title}</p>
