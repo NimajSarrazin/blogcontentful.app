@@ -20,9 +20,7 @@ export default function HeroAll({ title }) {
               <div className="flex justify-center mt-3 text-md ">
                 <Link href="/">
                   <span
-                    className={`text-white flex justify-center items-center font-light ${
-                      router.pathname === "/" ? "active " : ""
-                    }`}
+                    className="text-white flex justify-center items-center font-light"
                   >
                     Home
                     <svg

@@ -5,7 +5,7 @@ import Layout from "@/layout/Layout";
 import { createClient } from "contentful";
 
 export default function Home({ posts}) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <Layout>
       <div className="hero-bg">

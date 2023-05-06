@@ -27,7 +27,7 @@ export const dataComments = [
     name: "Lisa Martin",
     time: "5:15 PM",
     text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    avatar: "/img/Personne4.webp",
+    avatar: "",
     replies: ["/img/person_2.jpg", "/img/person_3.jpg"],
     jobs: "job search"
   },

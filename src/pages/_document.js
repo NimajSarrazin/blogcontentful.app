@@ -1,9 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
-
-
-export const metadata = {
-  title: "Readit_APP",
-};
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (

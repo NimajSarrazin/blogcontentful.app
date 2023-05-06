@@ -11,7 +11,7 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setShowModal(false);
   };
-  // ajout d'un useState scrool
+  // ajout d'un useState scrool pour afficher la navigation quand je scroll mais ne fonctionne pas..
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`bg-black text-white list-none absolute top-0 left-0 right-0 z-10 md:bg-transparent ${
+      className={`bg-black text-white list-none absolute top-0 left-0 right-0 z-20 md:bg-transparent ${
         scrolled ? "floating" : navStyleScrolling
       }`}
     >
@@ -111,6 +111,16 @@ export default function Navbar() {
         <Link href="/">
           <li className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">
             Home
+          </li>
+        </Link>
+        <Link href="/about">
+          <li className="hover:bg-orange-300 hover:shadow-xl  rounded-md text-sm font-medium">
+            About
+          </li>
+        </Link>
+        <Link href="/contact">
+          <li className="hover:bg-orange-300 hover:shadow-xl rounded-md text-sm font-medium">
+            Contact
           </li>
         </Link>
       </div>

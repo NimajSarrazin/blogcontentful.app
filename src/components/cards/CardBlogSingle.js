@@ -10,7 +10,7 @@ export default function CardBlogSingle({
   post,
 }) {
   return (
-    <div className="lg:w-3/4">
+    <div className="lg:w-2/3">
       <img src={url_img} alt={title} className="w-full pb-10" />
       <p className="text-xl text-center text-gray-300 pb-5">{createdAt}</p>
       <h2 className="text-2xl font-semibold text-gray-700 pb-4">{title}</h2>

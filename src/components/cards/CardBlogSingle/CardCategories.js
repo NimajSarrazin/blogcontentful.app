@@ -31,13 +31,9 @@ const categories = [
 export default function CardCategories() {
   return (
     <Collapse.Group>
-      {categories.map((category, index) => (
-        <div className="">
-          <Collapse
-            key={index}
-            title={category.title}
-            subtitle="More description about"
-          >
+      {categories.map((category) => (
+        <div className="" key={category.title}>
+          <Collapse title={category.title} subtitle="More description about">
             <Text>{category.description}</Text>
           </Collapse>
         </div>
