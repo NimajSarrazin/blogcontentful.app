@@ -47,3 +47,11 @@
   height: var(--bg-size);
 }
 
+
+/* section contact */
+.label {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  margin-right: 16px;
+}
