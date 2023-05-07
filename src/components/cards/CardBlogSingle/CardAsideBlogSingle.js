@@ -11,10 +11,10 @@ export default function CardAsideBlogSingle() {
           <input
             type="text"
             placeholder="Type a keyword and hit enter"
-            className="w-full text-sm px-3 py-2 placeholder-gray-400 text-gray-500 rounded-lg border-none ring-2 ring-gray-300"
+            className="w-full text-md px-3 py-2 0 text-gray-500 rounded-md border border-black ring-2 ring-gray-300 placeholder-gray-400"
           />
           <div className="absolute right-1  ">
-            <BiSearch className="text-gray-500 w-5 h-5  pointer-events-none" />
+            <BiSearch className="text-gray-800 w-5 h-5" />
           </div>
         </div>
       </form>
