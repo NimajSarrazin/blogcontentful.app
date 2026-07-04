@@ -1,18 +1,6 @@
 import { Avatar } from "@nextui-org/react";
 export default function CardHappyClient() {
-  const data = [
-    {
-      title: "Roger Scott",
-      job: "Marketing Manager",
-      url_img: "/img/Personne1.webp",
-    },
-    { title: "Jane Smith", job: "Sales Manager", url_img: "/img/person_2.jpg" },
-    {
-      title: "Bob Johnson",
-      job: "Product Manager",
-      url_img: "/img/person_3.jpg",
-    },
-  ];
+ 
 
   return (
     <div className="container grid grid-cols-1 md:justify-center md:gap-2 md:grid-cols-2  lg:grid-cols-3 mb-32">

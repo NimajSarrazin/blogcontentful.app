@@ -2,6 +2,31 @@ import Link from "next/link";
 import React from "react";
 import { BsArrowDown } from "react-icons/bs";
 
+function scrollToSection(targetSection, duration) {
+  const targetElement = document.querySelector(targetSection);
+  const targetPosition = targetElement.offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const startTime = performance.now();
+
+  function scrollStep(timestamp) {
+    const currentTime = timestamp - startTime;
+    const scrollProgress = Math.min(currentTime / duration, 1);
+    const ease = easeInOutCubic(scrollProgress);
+    window.scrollTo(0, startPosition + distance * ease);
+
+    if (currentTime < duration) {
+      window.requestAnimationFrame(scrollStep);
+    }
+  }
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  }
+
+  window.requestAnimationFrame(scrollStep);
+}
+
 export default function Hero() {
   return (
     <div
@@ -25,7 +50,12 @@ export default function Hero() {
               they live in Bookmarksgrove right at the coast of the Semantics, a
               large language ocean.
             </p>
-            <Link href='#sectionCard'>
+            <Link
+              href="#sectionCard"
+              onClick={() => {
+                scrollToSection("#sectionCard", 500);
+              }}
+            >
               <BsArrowDown className="text-white text-4xl absolute left-0 -bottom-20  z-20 cursor-pointer animate-bounce md:-bottom-30  lg:-bottom-14 xl:-bottom-52 xl:text-6xl" />
             </Link>
           </div>
