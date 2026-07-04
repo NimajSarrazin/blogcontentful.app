@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Command } from "cmdk";
 import { useRouter } from "next/navigation";
 import {
@@ -102,12 +103,23 @@ export function CommandPalette({ posts }: CommandPaletteProps) {
                 key={post.slug}
                 value={`${post.title} ${post.excerpt} ${post.category ?? ""}`}
                 onSelect={() => navigate(`/post/${post.slug}`)}
-                className="flex cursor-pointer flex-col gap-0.5 rounded-lg px-3 py-2.5 text-sm aria-selected:bg-accent"
+                className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm aria-selected:bg-accent"
               >
-                <span className="font-medium">{post.title}</span>
-                <span className="line-clamp-1 text-xs text-muted-foreground">
-                  {post.excerpt}
-                </span>
+                <div className="relative h-12 w-16 shrink-0 overflow-hidden rounded-md border border-border">
+                  <Image
+                    src={post.coverImage.url}
+                    alt={post.coverImage.alt}
+                    fill
+                    sizes="64px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <span className="block font-medium">{post.title}</span>
+                  <span className="line-clamp-1 text-xs text-muted-foreground">
+                    {post.excerpt}
+                  </span>
+                </div>
               </Command.Item>
             ))}
           </Command.Group>
